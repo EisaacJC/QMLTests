@@ -32,8 +32,7 @@ def noise(ansatz):
         ansatz_noise.rx(np.random.rand(), qubit)
         ansatz_noise.ry(np.random.rand(), qubit)
         ansatz_noise.rz(np.random.rand(), qubit)
-    return ansatz  
-
+    return ansatz
 
 
 def experiment(xdata,ydata, method, noisemethod, n):
@@ -146,7 +145,7 @@ def experiment(xdata,ydata, method, noisemethod, n):
             scores.append(sum(y_predict == y) / len(y))
             scores.append(sum(y_predict2 == y) / len(y))
         pd.DataFrame(scores).to_csv("experimental_data_Torch.csv")
-    elif method=="SVC":
+    elif method=="QSVC":
         X=xdata
         y=ydata
         scores=[]

@@ -1,6 +1,5 @@
 from qiskit.utils import algorithm_globals
 from sklearn.datasets import load_iris
-algorithm_globals.random_seed = 12345
 from qiskit.circuit.library import ZZFeatureMap
 from qiskit.primitives import Sampler
 from qiskit.algorithms.state_fidelities import ComputeUncompute
