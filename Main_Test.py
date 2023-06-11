@@ -1,3 +1,13 @@
+# This code is part of Qiskit.
+#
+# (C) Copyright IBM 2017.
+#
+# This code is licensed under the Apache License, Version 2.0. You may
+# obtain a copy of this license in the LICENSE.txt file in the root directory
+# of this source tree or at http://www.apache.org/licenses/LICENSE-2.0.
+#This is a modification of QML algorithms by Qiskit and IBM, this is intended only for educational purpose
+#Any doubts about content please refer to eisaacjc8@gmail.com
+
 import pandas as pd
 from qiskit.primitives import Sampler
 from qiskit.algorithms.state_fidelities import ComputeUncompute
@@ -26,6 +36,7 @@ from qiskit_machine_learning.connectors import TorchConnector
 import sklearn.datasets
 from sklearn.decomposition import PCA
 noise_model = noise.NoiseModel()
+
 def noise(ansatz):
     ansatz_noise=ansatz
     for qubit in range(ansatz.num_qubits):
@@ -33,8 +44,6 @@ def noise(ansatz):
         ansatz_noise.ry(np.random.rand(), qubit)
         ansatz_noise.rz(np.random.rand(), qubit)
     return ansatz
-
-
 def experiment(xdata,ydata, method, noisemethod, n):
     """
     xdata is a ndarray for features
@@ -80,7 +89,7 @@ def experiment(xdata,ydata, method, noisemethod, n):
             vqc2.fit(x_train, y_train)
             precs.append(classification_report(y_test, vqc1.predict(x_test)))
             precs.append(classification_report(y_test, vqc2.predict(x_test)))
-            print("Iteración:"+ str(i))
+            print("Iteration:"+ str(i))
         with open("res_bc.txt", 'w') as outfile:
             outfile.writelines((str(i)+'\n' for i in precs))
     elif method=="Torch":
