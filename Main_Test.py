@@ -195,6 +195,28 @@ if len(x.T)>4:
     x_pca = pca.fit_transform(x)
 else:
     x_pca=x
+print("Select a QML Algorithm:\n a) 'VQC'\n b) 'Torch'\n c) 'QSVC' ")
+method_name=str(input("Select Q-Algorithm\n"))
+print("Select a Noise Method Algorithm:\n a) 'feature'\n b) 'ansatz'\n  For QSVC is only available  feature.")
+noise_name=str(input("Select Noise Method\n"))
+print("Select the number of executions that you're going to use.\n Full metrics are only available  for QVC")
 
-experiment(xdata=x_pca,ydata=y, method=str(input("Select Q-Algorithm\n")), noisemethod=str(input("Select Noise Method\n")), n=int(input("Select the number of iterations\n")))
+try:
+    experiment(xdata=x_pca,ydata=y, method=method_name, noisemethod=noise_name, n=int(input()))
+except:
+    print("Options that you introduce are not well defined")
+    option=int("Try Again write 'again' or any key to close ")
+    if option=="again":
+        print("Select a QML Algorithm:\n a) 'VQC'\n b) 'Torch'\n c) QSVC")
+        method_name = str(input("Select Q-Algorithm\n"))
+        print("Select a Noise Method Algorithm:\n a) 'feature'\n b) 'ansatz'\n  For QSVC is only available  feature.")
+        noise_name = str(input("Select Noise Method\n"))
+        print("Select the number of executions that you're going to use.\n Full metrics are only available  for QVC")
+
+        experiment(xdata=x_pca, ydata=y, method=method_name, noisemethod=noise_name, n=int(input()))
+    else:
+        print("Closing")
+        for i in range(10):
+            print("-")
+        quit()
 
