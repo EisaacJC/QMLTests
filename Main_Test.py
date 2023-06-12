@@ -36,7 +36,11 @@ from qiskit_machine_learning.connectors import TorchConnector
 import sklearn.datasets
 from sklearn.decomposition import PCA
 noise_model = noise.NoiseModel()
-
+rand="seed"
+if rand=="seed":
+    algorithm_globals.random_seed = 123
+else:
+    pass
 def noise(ansatz):
     ansatz_noise=ansatz
     for qubit in range(ansatz.num_qubits):
@@ -170,6 +174,13 @@ def experiment(xdata,ydata, method, noisemethod, n):
                 qsvc.fit(train_features, train_labels)
                 qsvc_score = qsvc.score(test_features, test_labels)
                 scores.append(qsvc_score)
+                #Noise model
+                adhoc_feature_map2 = noise(noise(noise(adhoc_feature_map)))
+                adhoc_kernel = FidelityQuantumKernel(fidelity=fidelity, feature_map=adhoc_feature_map2)
+                qsvc2 = QSVC(quantum_kernel=adhoc_kernel)
+                qsvc2.fit(train_features, train_labels)
+                qsvc_score2 = qsvc2.score(test_features, test_labels)
+                scores.append(qsvc_score2)
                 pd.DataFrame(scores).to_csv("experimental_data_QSVC.csv")
         else:
             print("Noise method not valid for QSVC")
@@ -190,14 +201,18 @@ def experiment(xdata,ydata, method, noisemethod, n):
 
 
 #Execution
-#ds= sklearn.datasets.load_breast_cancer()
+ds= sklearn.datasets.load_breast_cancer()
 
-ds=load_iris()
+
+
+
+#ds=load_iris()
 x=ds.data
 y=ds.target
 x = x[y != 2]
 y = y[y != 2]
 pca = PCA(n_components=4)
+
 
 #Execute PCA if the dataset contains more than 4 features, this to be able to simulate on a computer.
 if len(x.T)>4:

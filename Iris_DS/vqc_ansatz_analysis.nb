@@ -1,0 +1,75 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2176,         65]
+NotebookOptionsPosition[      1597,         47]
+NotebookOutlinePosition[      2006,         63]
+CellTagsIndexPosition[      1963,         60]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.895510186856571*^9, 3.8955101906968193`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"ec1360f4-94b9-483b-8c65-ed4a473eda6d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "NotebookDirectory", "nosv", 
+   "\"The notebook \\!\\(\\*TemplateBox[Association[RuleDelayed[\\\"obj\\\", \
+NotebookObject[\\\"af111266-3fdf-45ff-af45-cf5069d2bbfb\\\", \
+\\\"20b7dd5e-cd8d-49fd-be76-c9cb1ecd67bb\\\"]], Rule[\\\"label\\\", \
+\\\"\\\\\\\"Sin t\\\\[IAcute]tulo-1\\\\\\\"\\\"]], \
+\\\"NotebookObjectUUIDsUnsaved\\\"]\\) is not saved.\"", 2, 1, 1, 
+   32849694988095298740, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.8955101941167817`*^9},
+ CellLabel->
+  "Durante la evaluaci\[OAcute]n de \
+In[1]:=",ExpressionUUID->"a2e29dcc-5ff9-47d8-906c-cc817c38729f"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.8955101941915007`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"e02974e4-db5e-41cd-94a7-bfe1983b4ad4"]
+}, Open  ]]
+},
+WindowSize->{569.25, 624.75},
+WindowMargins->{{429, Automatic}, {42, Automatic}},
+FrontEndVersion->"13.2 para Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"af111266-3fdf-45ff-af45-cf5069d2bbfb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 211, 3, 43, "Input",ExpressionUUID->"ec1360f4-94b9-483b-8c65-ed4a473eda6d"],
+Cell[794, 27, 628, 13, 39, "Message",ExpressionUUID->"a2e29dcc-5ff9-47d8-906c-cc817c38729f"],
+Cell[1425, 42, 156, 2, 55, "Output",ExpressionUUID->"e02974e4-db5e-41cd-94a7-bfe1983b4ad4"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
