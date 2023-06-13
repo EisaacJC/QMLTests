@@ -109,7 +109,7 @@ def experiment(xdata,ydata, method, noisemethod, n):
         y01_ = Tensor(y01).reshape(len(y)).long()
         y_ = Tensor(y).reshape(len(y), 1)
         num_inputs = 4
-        num_samples = 569
+        num_samples = len(X)
         def closure():
             optimizer.zero_grad()  # Initialize/clear gradients
             loss = f_loss(model1(X_), y_)  # Evaluate loss function

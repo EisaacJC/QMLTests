@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    134622,       3241]
-NotebookOptionsPosition[    130365,       3161]
-NotebookOutlinePosition[    130802,       3178]
-CellTagsIndexPosition[    130759,       3175]
+NotebookDataLength[    130861,       3168]
+NotebookOptionsPosition[    126379,       3084]
+NotebookOutlinePosition[    126816,       3101]
+CellTagsIndexPosition[    126773,       3098]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,31 +23,35 @@ Cell[BoxData[
   RowBox[{"SetDirectory", "[", 
    RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.895547420629586*^9, 3.8955474345412264`*^9}},
- CellLabel->"In[49]:=",ExpressionUUID->"7aa3efa5-8eb5-4308-982e-b680782b33e0"],
+ CellLabel->
+  "In[133]:=",ExpressionUUID->"7aa3efa5-8eb5-4308-982e-b680782b33e0"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"nnoise", "=", 
-   RowBox[{"Import", "[", "\"\<res_bc_ansatz_nnoise.csv\>\"", "]"}]}], 
+   RowBox[{"Import", "[", "\"\<ansatz_artificial_nnoise.csv\>\"", "]"}]}], 
   ";"}]], "Input",
  CellChangeTimes->{{3.895208773548819*^9, 3.895208801683592*^9}, {
   3.895455603039522*^9, 3.895455639501405*^9}, {3.8955474431403055`*^9, 
   3.895547445112104*^9}, {3.89563259050807*^9, 3.8956325948255568`*^9}, {
   3.8956387366179686`*^9, 3.8956387771177073`*^9}, {3.895668176574065*^9, 
-  3.89566820331977*^9}},
- CellLabel->"In[50]:=",ExpressionUUID->"cb19885a-8e31-41b4-93bb-44e209c9d62e"],
+  3.89566820331977*^9}, {3.8956691988903465`*^9, 3.8956692112852116`*^9}},
+ CellLabel->
+  "In[134]:=",ExpressionUUID->"cb19885a-8e31-41b4-93bb-44e209c9d62e"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"noise", "=", 
-   RowBox[{"Import", "[", "\"\<res_bc_ansatz_noise.csv\>\"", "]"}]}], 
+   RowBox[{"Import", "[", "\"\<ansatz_artificial_noise.csv\>\"", "]"}]}], 
   ";"}]], "Input",
  CellChangeTimes->{{3.89520880479207*^9, 3.895208818407893*^9}, {
   3.8954556295509424`*^9, 3.8954556423960223`*^9}, {3.8954574115528145`*^9, 
   3.8954574546160994`*^9}, {3.8955474518344746`*^9, 3.895547453930316*^9}, {
   3.8956325999050655`*^9, 3.8956326067581635`*^9}, {3.895638779330922*^9, 
-  3.8956387869396296`*^9}, {3.8956682086582303`*^9, 3.895668215008258*^9}},
- CellLabel->"In[51]:=",ExpressionUUID->"da5c3df2-3feb-4ef0-833f-089be38da600"],
+  3.8956387869396296`*^9}, {3.8956682086582303`*^9, 3.895668215008258*^9}, {
+  3.895669215473782*^9, 3.8956692221303616`*^9}},
+ CellLabel->
+  "In[135]:=",ExpressionUUID->"da5c3df2-3feb-4ef0-833f-089be38da600"],
 
 Cell[CellGroupData[{
 
@@ -58,34 +62,41 @@ Cell[BoxData[
     RowBox[{"2", ";;"}], ",", "2"}], "]"}], "]"}]], "Input",
  CellChangeTimes->{{3.895632600521125*^9, 3.8956326123187227`*^9}, {
   3.895638795967841*^9, 3.8956388201081514`*^9}},
- CellLabel->"In[52]:=",ExpressionUUID->"2779bdaa-cf0b-403f-81d7-40afefa62694"],
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"2779bdaa-cf0b-403f-81d7-40afefa62694"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
-  "0.57`", ",", "0.51`", ",", "0.34`", ",", "0.35`", ",", "0.55`", ",", 
-   "0.57`", ",", "0.65`", ",", "0.64`", ",", "0.61`", ",", "0.3`", ",", 
-   "0.41`", ",", "0.51`", ",", "0.6`", ",", "0.55`", ",", "0.5`", ",", 
-   "0.68`", ",", "0.55`", ",", "0.41`", ",", "0.7`", ",", "0.49`", ",", 
-   "0.46`", ",", "0.57`", ",", "0.55`", ",", "0.52`", ",", "0.46`", ",", 
-   "0.31`", ",", "0.41`"}], "}"}]], "Output",
+  "0.65`", ",", "0.7`", ",", "0.6`", ",", "0.55`", ",", "0.5`", ",", "0.7`", 
+   ",", "0.55`", ",", "0.65`", ",", "0.65`", ",", "0.55`", ",", "0.55`", ",", 
+   "0.7`", ",", "0.55`", ",", "0.5`", ",", "0.55`", ",", "0.55`", ",", 
+   "0.75`", ",", "0.55`", ",", "0.55`", ",", "0.75`", ",", "0.7`", ",", 
+   "0.6`", ",", "0.65`", ",", "0.65`", ",", "0.7`", ",", "0.5`", ",", 
+   "0.5`"}], "}"}]], "Output",
  CellChangeTimes->{{3.8956387980676274`*^9, 3.8956388204578285`*^9}, 
-   3.8956682165876293`*^9},
- CellLabel->"Out[52]=",ExpressionUUID->"f58d1efd-0431-4399-8b43-eafc0d01df61"]
+   3.8956682165876293`*^9, 3.895669225245232*^9, 3.895670308846329*^9},
+ CellLabel->
+  "Out[136]=",ExpressionUUID->"31a85dcd-d934-4ee0-ab82-b6bdc8abc734"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"StandardDeviation", "[", "x", "]"}]], "Input",
+ RowBox[{"StandardDeviation", "[", "y", "]"}]], "Input",
  CellChangeTimes->{{3.895637137029916*^9, 3.8956371648374214`*^9}, {
-  3.8956500434128447`*^9, 3.89565006956839*^9}},
- CellLabel->"In[53]:=",ExpressionUUID->"b97cdd4a-0e33-455c-9b22-d0aca3f66767"],
+  3.8956500434128447`*^9, 3.89565006956839*^9}, {3.895670357872916*^9, 
+  3.8956703647365284`*^9}, {3.895670404949929*^9, 3.895670421977318*^9}},
+ CellLabel->
+  "In[145]:=",ExpressionUUID->"b97cdd4a-0e33-455c-9b22-d0aca3f66767"],
 
-Cell[BoxData["0.06158171556807822`"], "Output",
+Cell[BoxData["0.07490164491021817`"], "Output",
  CellChangeTimes->{{3.8956371400373898`*^9, 3.8956371650671444`*^9}, {
-   3.895650044428425*^9, 3.895650069858732*^9}, 3.895668217716008*^9},
- CellLabel->"Out[53]=",ExpressionUUID->"04af60e6-e65c-43ee-b446-5d623daa3eaa"]
+   3.895650044428425*^9, 3.895650069858732*^9}, 3.895668217716008*^9, {
+   3.8956703099492993`*^9, 3.8956703195722976`*^9}, {3.895670358940969*^9, 
+   3.895670365170431*^9}, {3.8956704053154507`*^9, 3.895670422336034*^9}},
+ CellLabel->
+  "Out[145]=",ExpressionUUID->"374333f4-25e7-4675-97f5-4936a1157002"]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -94,17 +105,19 @@ Cell[BoxData[{
    RowBox[{"noise", "[", 
     RowBox[{"[", 
      RowBox[{
-      RowBox[{"2", ";;"}], ",", "2"}], "]"}], "]"}]}], 
+      RowBox[{"2", ";;"}], ",", "1"}], "]"}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"y", "=", 
    RowBox[{"nnoise", "[", 
     RowBox[{"[", 
      RowBox[{
-      RowBox[{"2", ";;"}], ",", "2"}], "]"}], "]"}]}], ";"}]}], "Input",
+      RowBox[{"2", ";;"}], ",", "1"}], "]"}], "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.8955496073790245`*^9, 3.895549625057106*^9}, {
-  3.895638822807861*^9, 3.8956388240265107`*^9}},
- CellLabel->"In[54]:=",ExpressionUUID->"c9ab3450-4e88-4c94-9d2c-ed2e885c58e8"],
+  3.895638822807861*^9, 3.8956388240265107`*^9}, {3.895669228974883*^9, 
+  3.895669230368759*^9}},
+ CellLabel->
+  "In[138]:=",ExpressionUUID->"c9ab3450-4e88-4c94-9d2c-ed2e885c58e8"],
 
 Cell[CellGroupData[{
 
@@ -129,12 +142,13 @@ Cell[BoxData[
   3.8955496316342936`*^9}, {3.895549692165794*^9, 3.895549813252596*^9}, {
   3.8955498645657735`*^9, 3.895549882436103*^9}, {3.8955499711235538`*^9, 
   3.8955499735282383`*^9}},
- CellLabel->"In[56]:=",ExpressionUUID->"d25ca28a-9e36-4bea-8f45-34dc3e2115b5"],
+ CellLabel->
+  "In[100]:=",ExpressionUUID->"d25ca28a-9e36-4bea-8f45-34dc3e2115b5"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.72, 0.3836399216673073}, {0.27999999999999997`, 
+    PointBox[{{0.7635, 0.3836399216673073}, {0.46649999999999997`, 
      2.6163600783326926`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -151,43 +165,45 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.4225, 0.7754133086869819}, {0.4225, 
-              1.2245866913130181`}, {0.57, 1.2245866913130181`}, {0.57, 
+             PolygonBox[{{0.56, 0.7754133086869819}, {0.56, 
+              1.2245866913130181`}, {0.695, 1.2245866913130181`}, {0.695, 
               0.7754133086869819}}], {}, {{}, {}}, {Antialiasing -> True, 
               GrayLevel[0], 
               GrayLevel[0], 
               
-              PolygonBox[{{0.5100000000000001, 1.2245866913130181`}, {
-               0.5100000000000001, 0.7754133086869819}, {0.46685152018273063`,
-                1.}, {0.5100000000000001, 1.2245866913130181`}, {
-               0.5531484798172696, 1.}, {0.5100000000000001, 
+              PolygonBox[{{0.617037037037037, 1.2245866913130181`}, {
+               0.617037037037037, 0.7754133086869819}, {0.5862857752360464, 
+               1.}, {0.617037037037037, 1.2245866913130181`}, {
+               0.6477882988380277, 1.}, {0.617037037037037, 
                0.7754133086869819}}]}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.52, 1.2245866913130181`}, {0.52, 
+              LineBox[{{0.62, 1.2245866913130181`}, {0.62, 
                0.7754133086869819}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.57, 1.}, {0.7, 1.}}, {{0.4225, 1.}, {0.3, 1.}}}]}, {
+              
+              LineBox[{{{0.695, 1.}, {0.75, 1.}}, {{0.56, 1.}, {0.48, 
+               1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.7, 1.112293345656509}, {0.7, 
-               0.8877066543434909}}, {{0.3, 1.112293345656509}, {0.3, 
+              LineBox[{{{0.75, 1.112293345656509}, {0.75, 
+               0.8877066543434909}}, {{0.48, 1.112293345656509}, {0.48, 
                0.8877066543434909}}}]}, {}}]},
           
-          ImageSizeCache->{{95.56505007707696, 428.802139926318}, {
-           16.079270302840698`, 64.09705732817385}}],
+          ImageSizeCache->{{95.56505007707688, 428.8021399263181}, {
+           16.079270302840683`, 64.09705732817383}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.7`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.57`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.52`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.4225`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.3`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.695`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.62`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.56`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.48`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -212,11 +228,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.7}, {
-            Style["75%", Bold], 0.57}, {
-            Style["median", Bold], 0.52}, {
-            Style["25%", Bold], 0.4225}, {
-            Style["min", Bold], 0.3}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.695}, {
+            Style["median", Bold], 0.62}, {
+            Style["25%", Bold], 0.56}, {
+            Style["min", Bold], 0.48}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -245,43 +261,45 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.44, 1.7754133086869819`}, {0.44, 
-              2.224586691313018}, {0.51, 2.224586691313018}, {0.51, 
+             PolygonBox[{{0.56, 1.7754133086869819`}, {0.56, 
+              2.224586691313018}, {0.6475, 2.224586691313018}, {0.6475, 
               1.7754133086869819`}}], {}, {{}, {}}, {Antialiasing -> True, 
               GrayLevel[0], 
               GrayLevel[0], 
               
-              PolygonBox[{{0.4703703703703704, 2.224586691313018}, {
-               0.4703703703703704, 1.775413308686982}, {0.44638543073476517`, 
-               2.}, {0.4703703703703704, 2.224586691313018}, {
-               0.4943553100059756, 2.}, {0.4703703703703704, 
+              PolygonBox[{{0.6022222222222221, 2.224586691313018}, {
+               0.6022222222222221, 1.775413308686982}, {0.5726718242402543, 
+               2.}, {0.6022222222222221, 2.224586691313018}, {
+               0.6317726202041899, 2.}, {0.6022222222222221, 
                1.775413308686982}}]}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.45, 2.224586691313018}, {0.45, 
+              LineBox[{{0.62, 2.224586691313018}, {0.62, 
                1.775413308686982}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.51, 2.}, {0.64, 2.}}, {{0.44, 2.}, {0.4, 2.}}}]}, {
+              
+              LineBox[{{{0.6475, 2.}, {0.75, 2.}}, {{0.56, 2.}, {0.48, 
+               2.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.64, 2.112293345656509}, {0.64, 
-               1.887706654343491}}, {{0.4, 2.112293345656509}, {0.4, 
+              LineBox[{{{0.75, 2.112293345656509}, {0.75, 
+               1.887706654343491}}, {{0.48, 2.112293345656509}, {0.48, 
                1.887706654343491}}}]}, {}}]},
           
-          ImageSizeCache->{{178.16721575820074`, 
-           379.24084051764385`}, {-84.52633467845398, -36.50854765312084}}],
+          ImageSizeCache->{{95.56505007707688, 
+           428.8021399263181}, {-84.526334678454, -36.50854765312084}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.64`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.51`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.45`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.44`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.4`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.6475`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.62`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.56`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.48`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -306,11 +324,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.64}, {
-            Style["75%", Bold], 0.51}, {
-            Style["median", Bold], 0.45}, {
-            Style["25%", Bold], 0.44}, {
-            Style["min", Bold], 0.4}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.6475}, {
+            Style["median", Bold], 0.62}, {
+            Style["25%", Bold], 0.56}, {
+            Style["min", Bold], 0.48}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -331,7 +349,7 @@ Cell[BoxData[
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{-0.72, 0.70295463955568},
+  AxesOrigin->{-0.7635, 0.70295463955568},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{None, None}, {None, None}},
@@ -383,19 +401,7 @@ Cell[BoxData[
          TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
        2.224586691313018, 
         FormBox[
-         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.3, 
-        FormBox[
-         TagBox[
-          InterpretationBox[
-           StyleBox["\"0.3\"", ShowStringCharacters -> False], 
-           0.3`15.954589770191003, AutoDelete -> True], NumberForm[#, {
-            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.4, 
-        FormBox[
-         TagBox[
-          InterpretationBox[
-           StyleBox["\"0.4\"", ShowStringCharacters -> False], 
-           0.4`15.954589770191003, AutoDelete -> True], NumberForm[#, {
-            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.5, 
+         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.5, 
         FormBox[
          TagBox[
           InterpretationBox[
@@ -413,31 +419,7 @@ Cell[BoxData[
           InterpretationBox[
            StyleBox["\"0.7\"", ShowStringCharacters -> False], 
            0.7`15.954589770191003, AutoDelete -> True], NumberForm[#, {
-            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.2, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.22, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.24, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.26, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.28, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.32, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.34, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.36, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.38, 
+            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.4, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
        0.42, 
@@ -490,41 +472,13 @@ Cell[BoxData[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {0.8, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}}, {{
-       0.3, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.4, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.5, 
+       0.5, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.6, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.7, 
         FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.2, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.22, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.24, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.26, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.28, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.32, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.34, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.36, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.38, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.4, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
        0.42, 
@@ -603,8 +557,9 @@ Cell[BoxData[
    3.8955496322151885`*^9, {3.895549707189789*^9, 3.8955498140035915`*^9}, {
    3.8955498788730564`*^9, 3.8955498833174396`*^9}, 3.8955499761062136`*^9, 
    3.89563261722302*^9, 3.89563879191787*^9, 3.8956388261617975`*^9, 
-   3.895668219704076*^9},
- CellLabel->"Out[56]=",ExpressionUUID->"0f7b2a43-8f47-4049-9b83-76300735fb76"]
+   3.895668219704076*^9, 3.8956692324151893`*^9},
+ CellLabel->
+  "Out[100]=",ExpressionUUID->"cc6ab60b-df06-469f-86c3-9dcaabe337b6"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -654,12 +609,13 @@ Cell[BoxData[
   3.895638595837542*^9, 3.895638598497811*^9}, {3.895638631601322*^9, 
   3.895638673187847*^9}, {3.895650746464096*^9, 3.895650751108611*^9}},
  NumberMarks->False,
- CellLabel->"In[57]:=",ExpressionUUID->"ef6a0f72-927e-4afe-b5f9-8d792bda8fef"],
+ CellLabel->
+  "In[101]:=",ExpressionUUID->"ef6a0f72-927e-4afe-b5f9-8d792bda8fef"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.72, 0.3836399216673073}, {0.27999999999999997`, 
+    PointBox[{{0.7635, 0.3836399216673073}, {0.46649999999999997`, 
      2.6163600783326926`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -676,43 +632,45 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.4225, 0.7754133086869819}, {0.4225, 
-              1.2245866913130181`}, {0.57, 1.2245866913130181`}, {0.57, 
+             PolygonBox[{{0.56, 0.7754133086869819}, {0.56, 
+              1.2245866913130181`}, {0.695, 1.2245866913130181`}, {0.695, 
               0.7754133086869819}}], {}, {{}, {}}, {Antialiasing -> True, 
               GrayLevel[0], 
               GrayLevel[0], 
               
-              PolygonBox[{{0.5100000000000001, 1.2245866913130181`}, {
-               0.5100000000000001, 0.7754133086869819}, {0.46685152018273063`,
-                1.}, {0.5100000000000001, 1.2245866913130181`}, {
-               0.5531484798172696, 1.}, {0.5100000000000001, 
+              PolygonBox[{{0.617037037037037, 1.2245866913130181`}, {
+               0.617037037037037, 0.7754133086869819}, {0.5862857752360464, 
+               1.}, {0.617037037037037, 1.2245866913130181`}, {
+               0.6477882988380277, 1.}, {0.617037037037037, 
                0.7754133086869819}}]}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.52, 1.2245866913130181`}, {0.52, 
+              LineBox[{{0.62, 1.2245866913130181`}, {0.62, 
                0.7754133086869819}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.57, 1.}, {0.7, 1.}}, {{0.4225, 1.}, {0.3, 1.}}}]}, {
+              
+              LineBox[{{{0.695, 1.}, {0.75, 1.}}, {{0.56, 1.}, {0.48, 
+               1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.7, 1.112293345656509}, {0.7, 
-               0.8877066543434909}}, {{0.3, 1.112293345656509}, {0.3, 
+              LineBox[{{{0.75, 1.112293345656509}, {0.75, 
+               0.8877066543434909}}, {{0.48, 1.112293345656509}, {0.48, 
                0.8877066543434909}}}]}, {}}]},
           
-          ImageSizeCache->{{146.29620902285413`, 539.1302558208956}, {
-           19.011906206513856`, 75.18065487532172}}],
+          ImageSizeCache->{{146.29620902285433`, 539.1302558208961}, {
+           19.011906206513828`, 75.1806548753217}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.7`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.57`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.52`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.4225`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.3`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.695`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.62`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.56`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.48`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -737,11 +695,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.7}, {
-            Style["75%", Bold], 0.57}, {
-            Style["median", Bold], 0.52}, {
-            Style["25%", Bold], 0.4225}, {
-            Style["min", Bold], 0.3}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.695}, {
+            Style["median", Bold], 0.62}, {
+            Style["25%", Bold], 0.56}, {
+            Style["min", Bold], 0.48}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -770,43 +728,45 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.44, 1.7754133086869819`}, {0.44, 
-              2.224586691313018}, {0.51, 2.224586691313018}, {0.51, 
+             PolygonBox[{{0.56, 1.7754133086869819`}, {0.56, 
+              2.224586691313018}, {0.6475, 2.224586691313018}, {0.6475, 
               1.7754133086869819`}}], {}, {{}, {}}, {Antialiasing -> True, 
               GrayLevel[0], 
               GrayLevel[0], 
               
-              PolygonBox[{{0.4703703703703704, 2.224586691313018}, {
-               0.4703703703703704, 1.775413308686982}, {0.44638543073476517`, 
-               2.}, {0.4703703703703704, 2.224586691313018}, {
-               0.4943553100059756, 2.}, {0.4703703703703704, 
+              PolygonBox[{{0.6022222222222221, 2.224586691313018}, {
+               0.6022222222222221, 1.775413308686982}, {0.5726718242402543, 
+               2.}, {0.6022222222222221, 2.224586691313018}, {
+               0.6317726202041899, 2.}, {0.6022222222222221, 
                1.775413308686982}}]}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.45, 2.224586691313018}, {0.45, 
+              LineBox[{{0.62, 2.224586691313018}, {0.62, 
                1.775413308686982}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.51, 2.}, {0.64, 2.}}, {{0.44, 2.}, {0.4, 2.}}}]}, {
+              
+              LineBox[{{{0.6475, 2.}, {0.75, 2.}}, {{0.56, 2.}, {0.48, 
+               2.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.64, 2.112293345656509}, {0.64, 
-               1.887706654343491}}, {{0.4, 2.112293345656509}, {0.4, 
+              LineBox[{{{0.75, 2.112293345656509}, {0.75, 
+               1.887706654343491}}, {{0.48, 2.112293345656509}, {0.48, 
                1.887706654343491}}}]}, {}}]},
           
-          ImageSizeCache->{{243.797613941178, 
-           480.62941286990144`}, {-99.74028082695214, -43.571532158144294`}}],
+          ImageSizeCache->{{146.29620902285433`, 
+           539.1302558208961}, {-99.7402808269522, -43.57153215814432}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.64`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.51`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.45`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.44`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.4`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.6475`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.62`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.56`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.48`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -831,11 +791,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.64}, {
-            Style["75%", Bold], 0.51}, {
-            Style["median", Bold], 0.45}, {
-            Style["25%", Bold], 0.44}, {
-            Style["min", Bold], 0.4}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.6475}, {
+            Style["median", Bold], 0.62}, {
+            Style["25%", Bold], 0.56}, {
+            Style["min", Bold], 0.48}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -856,7 +816,7 @@ Cell[BoxData[
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{-0.72, 0.70295463955568},
+  AxesOrigin->{-0.7635, 0.70295463955568},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{
@@ -918,19 +878,7 @@ Cell[BoxData[
          TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
        2.224586691313018, 
         FormBox[
-         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.3, 
-        FormBox[
-         TagBox[
-          InterpretationBox[
-           StyleBox["\"0.3\"", ShowStringCharacters -> False], 
-           0.3`15.954589770191003, AutoDelete -> True], NumberForm[#, {
-            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.4, 
-        FormBox[
-         TagBox[
-          InterpretationBox[
-           StyleBox["\"0.4\"", ShowStringCharacters -> False], 
-           0.4`15.954589770191003, AutoDelete -> True], NumberForm[#, {
-            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.5, 
+         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.5, 
         FormBox[
          TagBox[
           InterpretationBox[
@@ -948,31 +896,7 @@ Cell[BoxData[
           InterpretationBox[
            StyleBox["\"0.7\"", ShowStringCharacters -> False], 
            0.7`15.954589770191003, AutoDelete -> True], NumberForm[#, {
-            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.2, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.22, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.24, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.26, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.28, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.32, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.34, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.36, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.38, 
+            DirectedInfinity[1], 1}]& ], TraditionalForm], {0.01, 0.}}, {0.4, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
        0.42, 
@@ -1025,41 +949,13 @@ Cell[BoxData[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {0.8, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}}, {{
-       0.3, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.4, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.5, 
+       0.5, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.6, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.7, 
         FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.2, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.22, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.24, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.26, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.28, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.32, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.34, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.36, 
-        FormBox[
-         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
-       0.38, 
+         TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.01, 0.}}, {0.4, 
         FormBox[
          TemplateBox[{0, 0}, "Spacer2"], TraditionalForm], {0.005, 0.}}, {
        0.42, 
@@ -1141,25 +1037,28 @@ Cell[BoxData[
  CellChangeTimes->{{3.895549965691081*^9, 3.895549982539591*^9}, {
    3.8956326286782503`*^9, 3.895632631579735*^9}, 3.8956385995309544`*^9, {
    3.895638642597769*^9, 3.8956386736965685`*^9}, 3.895638833957571*^9, 
-   3.8956507535245886`*^9, 3.8956682226708508`*^9},
- CellLabel->"Out[57]=",ExpressionUUID->"febc4172-d057-4fff-994d-2c17aacc07e2"]
+   3.8956507535245886`*^9, 3.8956682226708508`*^9, 3.895669236847031*^9},
+ CellLabel->
+  "Out[101]=",ExpressionUUID->"c7a3f497-881e-4bb9-8eee-f27cbcaafd90"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Export", "[", 
-  RowBox[{"\"\<distributions_credit_ansatz.pdf\>\"", ",", "%"}], 
+  RowBox[{"\"\<distributions_artificial_ansatz.pdf\>\"", ",", "%"}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.8956386019379964`*^9, 3.89563862470794*^9}, {
   3.8956388380880203`*^9, 3.8956388401082935`*^9}, {3.89566822925346*^9, 
-  3.8956682338531084`*^9}},
- CellLabel->"In[58]:=",ExpressionUUID->"0a99b78a-0d0a-42f2-946a-f990cffd6087"],
+  3.8956682338531084`*^9}, {3.895669242565036*^9, 3.8956692521749935`*^9}},
+ CellLabel->
+  "In[102]:=",ExpressionUUID->"0a99b78a-0d0a-42f2-946a-f990cffd6087"],
 
-Cell[BoxData["\<\"distributions_credit_ansatz.pdf\"\>"], "Output",
+Cell[BoxData["\<\"distributions_artificial_ansatz.pdf\"\>"], "Output",
  CellChangeTimes->{3.895638677377759*^9, 3.895638844008057*^9, 
-  3.8956507566248264`*^9, 3.895668235258262*^9},
- CellLabel->"Out[58]=",ExpressionUUID->"940a0ce5-5aa1-42d9-93ff-203d69d82b65"]
+  3.8956507566248264`*^9, 3.895668235258262*^9, 3.8956692540135036`*^9},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"9a7f177d-dfb5-44c1-931f-ce81263e3eb1"]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -1195,14 +1094,15 @@ Cell[BoxData[
  CellChangeTimes->{{3.8955510552336426`*^9, 3.895551063885906*^9}, {
   3.895639099347746*^9, 3.895639099717987*^9}, {3.895648097744512*^9, 
   3.8956480999802957`*^9}},
- CellLabel->"In[59]:=",ExpressionUUID->"c8cf00aa-8c06-489d-b3fe-4b81cb5febb9"],
+ CellLabel->
+  "In[146]:=",ExpressionUUID->"c8cf00aa-8c06-489d-b3fe-4b81cb5febb9"],
 
 Cell[BoxData[
  StyleBox[
   TagBox[GridBox[{
      {"\<\"\"\>", "\<\"Statistic\"\>", "\<\"P\[Hyphen]Value\"\>"},
-     {"\<\"Kolmogorov\[Hyphen]Smirnov\"\>", "0.37037037037037024`", 
-      "0.0328981059078355`"}
+     {"\<\"Kolmogorov\[Hyphen]Smirnov\"\>", "0.14814814814814814`", 
+      "0.7425425806622562`"}
     },
     AutoDelete->False,
     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
@@ -1216,8 +1116,10 @@ Cell[BoxData[
  CellChangeTimes->{{3.895550622134448*^9, 3.89555065267104*^9}, {
    3.8955510473876677`*^9, 3.89555106779005*^9}, 3.8956326371563997`*^9, 
    3.8956389319180374`*^9, 3.8956391050627594`*^9, 3.8956391819778075`*^9, {
-   3.8956480894016027`*^9, 3.89564810525799*^9}, 3.8956682399749203`*^9},
- CellLabel->"Out[59]=",ExpressionUUID->"a012e242-418a-45a9-a066-458c4510961b"]
+   3.8956480894016027`*^9, 3.89564810525799*^9}, 3.8956682399749203`*^9, 
+   3.8956692577051215`*^9, 3.8956705567641068`*^9},
+ CellLabel->
+  "Out[146]=",ExpressionUUID->"e7dc0e34-1b5c-49cf-baf4-3af5d84e0c54"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1246,13 +1148,15 @@ Cell[BoxData[
  CellChangeTimes->{{3.8956389858278894`*^9, 3.8956390528979464`*^9}, {
   3.8956391078380647`*^9, 3.8956391146276913`*^9}, {3.8956391760179014`*^9, 
   3.8956391768379784`*^9}},
- CellLabel->"In[60]:=",ExpressionUUID->"5ffcc727-1c4a-4470-b8d6-9632b4c025e9"],
+ CellLabel->
+  "In[104]:=",ExpressionUUID->"5ffcc727-1c4a-4470-b8d6-9632b4c025e9"],
 
-Cell[BoxData["0.09092587825025207`"], "Output",
+Cell[BoxData["0.4439931087483641`"], "Output",
  CellChangeTimes->{{3.895639025807907*^9, 3.895639057960017*^9}, {
    3.8956391087880793`*^9, 3.8956391151196394`*^9}, 3.8956391773521714`*^9, 
-   3.895668252480956*^9},
- CellLabel->"Out[60]=",ExpressionUUID->"f4818066-ea06-4109-b783-92874efd87a6"]
+   3.895668252480956*^9, 3.8956692673052483`*^9},
+ CellLabel->
+  "Out[104]=",ExpressionUUID->"b0babd5a-d2eb-4b92-845d-5d576b1a6b14"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1328,12 +1232,14 @@ Cell[BoxData[
  CellChangeTimes->{{3.8956327288131237`*^9, 3.895632789573902*^9}, {
   3.8956362966372385`*^9, 3.895636298997238*^9}, {3.895638853658453*^9, 
   3.895638853757674*^9}},
- CellLabel->"In[61]:=",ExpressionUUID->"8fa61195-ee17-416d-a987-ad4181ec05c6"],
+ CellLabel->
+  "In[105]:=",ExpressionUUID->"8fa61195-ee17-416d-a987-ad4181ec05c6"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.388, -0.19605693430634064`}, {0.652, 2.1960569343063403`}}]}, 
+    PointBox[{{0.4875, -0.19605693430634064`}, {0.7625, 
+     2.1960569343063403`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
      {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -1349,41 +1255,35 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.51, 0.8039430656936596}, {0.51, 
-              1.1960569343063403`}, {0.44, 1.1960569343063403`}, {0.44, 
-              0.8039430656936596}}], {}, {{
-               InsetBox[
-                BoxData[
-                 FormBox[
-                  StyleBox["\"\[FilledCircle]\"", 10, 
-                   GrayLevel[0], StripOnInput -> False], TraditionalForm]], {
-                0.64, 1.}]}, {}}, {}, {
+             PolygonBox[{{0.65, 0.8039430656936596}, {0.65, 
+              1.1960569343063403`}, {0.55, 1.1960569343063403`}, {0.55, 
+              0.8039430656936596}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.45, 1.1960569343063403`}, {0.45, 
+              LineBox[{{0.6, 1.1960569343063403`}, {0.6, 
                0.8039430656936597}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.44, 1.}, {0.4, 1.}}, {{0.51, 1.}, {0.6, 1.}}}]}, {
+              LineBox[{{{0.55, 1.}, {0.5, 1.}}, {{0.65, 1.}, {0.75, 1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.4, 1.0980284671531702`}, {0.4, 
-               0.9019715328468298}}, {{0.6, 1.0980284671531702`}, {0.6, 
+              LineBox[{{{0.5, 1.0980284671531702`}, {0.5, 
+               0.9019715328468298}}, {{0.75, 1.0980284671531702`}, {0.75, 
                0.9019715328468298}}}]}, {}}]},
           
-          ImageSizeCache->{{60.86760461944516, 
-           593.8074442086798}, {-11.20936981237313, 6.142494812373084}}],
+          ImageSizeCache->{{60.867604619445046`, 
+           589.1323953805552}, {-8.6847577853109, 3.617882785310897}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.64`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.51`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.45`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.44`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.4`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.65`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.6`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.55`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.5`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -1408,11 +1308,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.64}, {
-            Style["75%", Bold], 0.51}, {
-            Style["median", Bold], 0.45}, {
-            Style["25%", Bold], 0.44}, {
-            Style["min", Bold], 0.4}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.65}, {
+            Style["median", Bold], 0.6}, {
+            Style["25%", Bold], 0.55}, {
+            Style["min", Bold], 0.5}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -1433,7 +1333,7 @@ Cell[BoxData[
     Rational[1, 10], 0.1],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{0.388, 0.7843373722630256},
+  AxesOrigin->{0.4875, 0.7843373722630256},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{None, None}, {None, None}},
@@ -1453,40 +1353,40 @@ Cell[BoxData[
         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
       1.1960569343063403`, 
        FormBox[
-        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.6, 
-       FormBox["0.6`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.64, 
-       FormBox["0.64`", TraditionalForm]}, {0.49, 
-       FormBox["0.49`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.5, 
-       FormBox["0.5`", TraditionalForm]}}, {{0.44, 
-       FormBox["\"q1\"", TraditionalForm]}, {0.51, 
-       FormBox["\"q3\"", TraditionalForm]}, {0.615, 
-       FormBox["\"near\"", TraditionalForm]}, {0.72, 
+        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}}, {{0.55, 
+       FormBox["\"q1\"", TraditionalForm]}, {0.65, 
+       FormBox["\"q3\"", TraditionalForm]}, {0.8, 
+       FormBox["\"near\"", TraditionalForm]}, {0.95, 
        FormBox["\"far\"", TraditionalForm]}}}},
-  GridLines->{{{0.615, 
-      Dashing[{Small, Small}]}, {0.72, 
+  GridLines->{{{0.8, 
+      Dashing[{Small, Small}]}, {0.95, 
       Dashing[{Small, Small}]}}, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
@@ -1507,8 +1407,9 @@ Cell[BoxData[
        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}]], "Output",
  CellChangeTimes->{
   3.895632791543356*^9, 3.8956363001629868`*^9, {3.895638848137789*^9, 
-   3.895638854175992*^9}, 3.8956682543181257`*^9},
- CellLabel->"Out[61]=",ExpressionUUID->"f932154f-ebaf-4ae4-b8a2-b86c07d513b1"]
+   3.895638854175992*^9}, 3.8956682543181257`*^9, 3.895669270136983*^9},
+ CellLabel->
+  "Out[105]=",ExpressionUUID->"ba734942-c8f4-41ed-b1f6-5f7e5b28b5ab"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1518,12 +1419,14 @@ Cell[BoxData[
   RowBox[{"bw1", ",", 
    RowBox[{"ImageSize", "->", "Full"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.8956362913070593`*^9, 3.8956363309175835`*^9}},
- CellLabel->"In[62]:=",ExpressionUUID->"cf89fc26-c1e6-4da2-9ea5-eb54a3f86154"],
+ CellLabel->
+  "In[106]:=",ExpressionUUID->"cf89fc26-c1e6-4da2-9ea5-eb54a3f86154"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.388, -0.19605693430634064`}, {0.652, 2.1960569343063403`}}]}, 
+    PointBox[{{0.4875, -0.19605693430634064`}, {0.7625, 
+     2.1960569343063403`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
      {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -1539,41 +1442,35 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.51, 0.8039430656936596}, {0.51, 
-              1.1960569343063403`}, {0.44, 1.1960569343063403`}, {0.44, 
-              0.8039430656936596}}], {}, {{
-               InsetBox[
-                BoxData[
-                 FormBox[
-                  StyleBox["\"\[FilledCircle]\"", 10, 
-                   GrayLevel[0], StripOnInput -> False], TraditionalForm]], {
-                0.64, 1.}]}, {}}, {}, {
+             PolygonBox[{{0.65, 0.8039430656936596}, {0.65, 
+              1.1960569343063403`}, {0.55, 1.1960569343063403`}, {0.55, 
+              0.8039430656936596}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.45, 1.1960569343063403`}, {0.45, 
+              LineBox[{{0.6, 1.1960569343063403`}, {0.6, 
                0.8039430656936597}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.44, 1.}, {0.4, 1.}}, {{0.51, 1.}, {0.6, 1.}}}]}, {
+              LineBox[{{{0.55, 1.}, {0.5, 1.}}, {{0.65, 1.}, {0.75, 1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.4, 1.0980284671531702`}, {0.4, 
-               0.9019715328468298}}, {{0.6, 1.0980284671531702`}, {0.6, 
+              LineBox[{{{0.5, 1.0980284671531702`}, {0.5, 
+               0.9019715328468298}}, {{0.75, 1.0980284671531702`}, {0.75, 
                0.9019715328468298}}}]}, {}}]},
           
-          ImageSizeCache->{{120.54487734671784`, 
-           1190.5801714814072`}, {-13.349477823106795`, 8.637602823106768}}],
+          ImageSizeCache->{{120.54487734671807`, 
+           1185.9051226532831`}, {-13.349477823106788`, 8.637602823106768}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.64`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.51`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.45`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.44`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.4`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.65`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.6`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.55`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.5`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -1598,11 +1495,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.64}, {
-            Style["75%", Bold], 0.51}, {
-            Style["median", Bold], 0.45}, {
-            Style["25%", Bold], 0.44}, {
-            Style["min", Bold], 0.4}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.65}, {
+            Style["median", Bold], 0.6}, {
+            Style["25%", Bold], 0.55}, {
+            Style["min", Bold], 0.5}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -1623,7 +1520,7 @@ Cell[BoxData[
     Rational[1, 10], 0.1],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{0.388, 0.7843373722630256},
+  AxesOrigin->{0.4875, 0.7843373722630256},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{None, None}, {None, None}},
@@ -1643,40 +1540,40 @@ Cell[BoxData[
         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
       1.1960569343063403`, 
        FormBox[
-        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.6, 
-       FormBox["0.6`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.64, 
-       FormBox["0.64`", TraditionalForm]}, {0.49, 
-       FormBox["0.49`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.5, 
-       FormBox["0.5`", TraditionalForm]}}, {{0.44, 
-       FormBox["\"q1\"", TraditionalForm]}, {0.51, 
-       FormBox["\"q3\"", TraditionalForm]}, {0.615, 
-       FormBox["\"near\"", TraditionalForm]}, {0.72, 
+        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}}, {{0.55, 
+       FormBox["\"q1\"", TraditionalForm]}, {0.65, 
+       FormBox["\"q3\"", TraditionalForm]}, {0.8, 
+       FormBox["\"near\"", TraditionalForm]}, {0.95, 
        FormBox["\"far\"", TraditionalForm]}}}},
-  GridLines->{{{0.615, 
-      Dashing[{Small, Small}]}, {0.72, 
+  GridLines->{{{0.8, 
+      Dashing[{Small, Small}]}, {0.95, 
       Dashing[{Small, Small}]}}, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
@@ -1696,8 +1593,22 @@ Cell[BoxData[
       FormBox[
        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}]], "Output",
  CellChangeTimes->{{3.8956363184419727`*^9, 3.895636331247267*^9}, 
-   3.8956388590920534`*^9, 3.895668257941762*^9},
- CellLabel->"Out[62]=",ExpressionUUID->"34a985d4-e343-4b83-b67c-210837db018c"]
+   3.8956388590920534`*^9, 3.895668257941762*^9, 3.8956692740636735`*^9},
+ CellLabel->
+  "Out[106]=",ExpressionUUID->"8d32f076-41f1-47df-ba3a-1c263d8317d4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["_"], "Input",
+ CellChangeTimes->{3.8956692740448494`*^9},
+ CellLabel->
+  "In[107]:=",ExpressionUUID->"e3cb8ede-9cf8-426e-9d31-04ec98e73fb0"],
+
+Cell[BoxData["_"], "Output",
+ CellChangeTimes->{3.89566927669512*^9},
+ CellLabel->
+  "Out[107]=",ExpressionUUID->"adfd8434-929e-4247-a66b-e03d565dc6f1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1736,12 +1647,14 @@ Cell[BoxData[
    RowBox[{"ImageSize", "->", "Full"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.895636476910739*^9, 3.8956365010372286`*^9}},
  NumberMarks->False,
- CellLabel->"In[63]:=",ExpressionUUID->"473ac168-2afe-4bd2-8caa-8e9266452db5"],
+ CellLabel->
+  "In[108]:=",ExpressionUUID->"473ac168-2afe-4bd2-8caa-8e9266452db5"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.388, -0.19605693430634064`}, {0.652, 2.1960569343063403`}}]}, 
+    PointBox[{{0.4875, -0.19605693430634064`}, {0.7625, 
+     2.1960569343063403`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
      {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -1757,41 +1670,35 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.51, 0.8039430656936596}, {0.51, 
-              1.1960569343063403`}, {0.44, 1.1960569343063403`}, {0.44, 
-              0.8039430656936596}}], {}, {{
-               InsetBox[
-                BoxData[
-                 FormBox[
-                  StyleBox["\"\[FilledCircle]\"", 10, 
-                   GrayLevel[0], StripOnInput -> False], TraditionalForm]], {
-                0.64, 1.}]}, {}}, {}, {
+             PolygonBox[{{0.65, 0.8039430656936596}, {0.65, 
+              1.1960569343063403`}, {0.55, 1.1960569343063403`}, {0.55, 
+              0.8039430656936596}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.45, 1.1960569343063403`}, {0.45, 
+              LineBox[{{0.6, 1.1960569343063403`}, {0.6, 
                0.8039430656936597}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.44, 1.}, {0.4, 1.}}, {{0.51, 1.}, {0.6, 1.}}}]}, {
+              LineBox[{{{0.55, 1.}, {0.5, 1.}}, {{0.65, 1.}, {0.75, 1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.4, 1.0980284671531702`}, {0.4, 
-               0.9019715328468298}}, {{0.6, 1.0980284671531702`}, {0.6, 
+              LineBox[{{{0.5, 1.0980284671531702`}, {0.5, 
+               0.9019715328468298}}, {{0.75, 1.0980284671531702`}, {0.75, 
                0.9019715328468298}}}]}, {}}]},
           
-          ImageSizeCache->{{120.54487734671761`, 
-           1190.580171481407}, {-15.905630166856774`, 6.081450479356775}}],
+          ImageSizeCache->{{120.54487734671807`, 
+           1185.9051226532827`}, {-15.905630166856774`, 6.081450479356775}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.64`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.51`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.45`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.44`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.4`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.65`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.6`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.55`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.5`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -1816,11 +1723,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.64}, {
-            Style["75%", Bold], 0.51}, {
-            Style["median", Bold], 0.45}, {
-            Style["25%", Bold], 0.44}, {
-            Style["min", Bold], 0.4}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.65}, {
+            Style["median", Bold], 0.6}, {
+            Style["25%", Bold], 0.55}, {
+            Style["min", Bold], 0.5}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -1841,7 +1748,7 @@ Cell[BoxData[
     Rational[1, 10], 0.1],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{0.388, 0.7843373722630256},
+  AxesOrigin->{0.4875, 0.7843373722630256},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{None, None}, {
@@ -1863,40 +1770,40 @@ Cell[BoxData[
         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
       1.1960569343063403`, 
        FormBox[
-        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.6, 
-       FormBox["0.6`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.44, 
-       FormBox["0.44`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.45, 
-       FormBox["0.45`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.64, 
-       FormBox["0.64`", TraditionalForm]}, {0.49, 
-       FormBox["0.49`", TraditionalForm]}, {0.4, 
-       FormBox["0.4`", TraditionalForm]}, {0.5, 
-       FormBox["0.5`", TraditionalForm]}}, {{0.44, 
-       FormBox["\"q1\"", TraditionalForm]}, {0.51, 
-       FormBox["\"q3\"", TraditionalForm]}, {0.615, 
-       FormBox["\"near\"", TraditionalForm]}, {0.72, 
+        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.65, 
+       FormBox["0.65`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.55, 
+       FormBox["0.55`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.5, 
+       FormBox["0.5`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}, {0.6, 
+       FormBox["0.6`", TraditionalForm]}}, {{0.55, 
+       FormBox["\"q1\"", TraditionalForm]}, {0.65, 
+       FormBox["\"q3\"", TraditionalForm]}, {0.8, 
+       FormBox["\"near\"", TraditionalForm]}, {0.95, 
        FormBox["\"far\"", TraditionalForm]}}}},
-  GridLines->{{{0.615, 
-      Dashing[{Small, Small}]}, {0.72, 
+  GridLines->{{{0.8, 
+      Dashing[{Small, Small}]}, {0.95, 
       Dashing[{Small, Small}]}}, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
@@ -1925,25 +1832,29 @@ Cell[BoxData[
       FormBox[
        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}]], "Output",
  CellChangeTimes->{{3.8956364738470197`*^9, 3.895636508504515*^9}, 
-   3.895636539949256*^9, 3.8956388617980175`*^9, 3.8956682609810705`*^9},
- CellLabel->"Out[63]=",ExpressionUUID->"32abe06b-5261-4fcc-bd0b-d79bc55466f4"]
+   3.895636539949256*^9, 3.8956388617980175`*^9, 3.8956682609810705`*^9, 
+   3.8956692794451323`*^9},
+ CellLabel->
+  "Out[108]=",ExpressionUUID->"aa08813e-3d6b-4262-89e9-9d9fd12916b9"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Export", "[", " ", 
-  RowBox[{"\"\<distribution_q_ansatz_nnoise_credit.pdf\>\"", ",", "%"}], 
+  RowBox[{"\"\<distribution_q_ansatz_nnoise_artificial.pdf\>\"", ",", "%"}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.895636511072184*^9, 3.8956365374653234`*^9}, {
   3.8956388702678595`*^9, 3.8956388831493835`*^9}, {3.8956682764930663`*^9, 
-  3.895668279643892*^9}},
- CellLabel->"In[64]:=",ExpressionUUID->"b62a65df-13ec-4de7-b11d-5752e440e315"],
+  3.895668279643892*^9}, {3.895669284190909*^9, 3.89566928554498*^9}},
+ CellLabel->
+  "In[109]:=",ExpressionUUID->"b62a65df-13ec-4de7-b11d-5752e440e315"],
 
-Cell[BoxData["\<\"distribution_q_ansatz_nnoise_credit.pdf\"\>"], "Output",
+Cell[BoxData["\<\"distribution_q_ansatz_nnoise_artificial.pdf\"\>"], "Output",
  CellChangeTimes->{{3.8956365292973113`*^9, 3.895636542708151*^9}, 
-   3.8956388837780523`*^9, 3.8956682806170435`*^9},
- CellLabel->"Out[64]=",ExpressionUUID->"1c5ab992-5283-4f7c-9a24-18992d30ffab"]
+   3.8956388837780523`*^9, 3.8956682806170435`*^9, 3.8956692867851887`*^9},
+ CellLabel->
+  "Out[109]=",ExpressionUUID->"14f59119-9438-44da-a05a-2952a79cc890"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -1962,7 +1873,7 @@ Cell[BoxData[
      RowBox[{"noise", "[", 
       RowBox[{"[", 
        RowBox[{
-        RowBox[{"2", ";;"}], ",", "2"}], "]"}], "]"}]}], "}"}], ",", "\n", 
+        RowBox[{"2", ";;"}], ",", "1"}], "]"}], "]"}]}], "}"}], ",", "\n", 
    RowBox[{
     RowBox[{
      RowBox[{"{", 
@@ -2024,13 +1935,15 @@ Cell[BoxData[
              "}"}]}], "}"}]}], "}"}]}]}], "]"}]}]}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.8956327973392715`*^9, {3.8956369743874073`*^9, 3.8956369772814426`*^9}, {
-   3.8956388893578677`*^9, 3.8956388894478607`*^9}},
- CellLabel->"In[65]:=",ExpressionUUID->"6b50f65c-e787-43e8-9aa1-f356cc961245"],
+   3.8956388893578677`*^9, 3.8956388894478607`*^9}, {3.895669291768876*^9, 
+   3.89566929184503*^9}},
+ CellLabel->
+  "In[110]:=",ExpressionUUID->"6b50f65c-e787-43e8-9aa1-f356cc961245"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.27999999999999997`, -0.19605693430634064`}, {0.72, 
+    PointBox[{{0.46649999999999997`, -0.19605693430634064`}, {0.7635, 
      2.1960569343063403`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -2047,35 +1960,37 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.57, 0.8039430656936596}, {0.57, 
-              1.1960569343063403`}, {0.4225, 1.1960569343063403`}, {0.4225, 
+             PolygonBox[{{0.695, 0.8039430656936596}, {0.695, 
+              1.1960569343063403`}, {0.56, 1.1960569343063403`}, {0.56, 
               0.8039430656936596}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.52, 1.1960569343063403`}, {0.52, 
+              LineBox[{{0.62, 1.1960569343063403`}, {0.62, 
                0.8039430656936597}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.4225, 1.}, {0.3, 1.}}, {{0.57, 1.}, {0.7, 1.}}}]}, {
+              
+              LineBox[{{{0.56, 1.}, {0.48, 1.}}, {{0.695, 1.}, {0.75, 
+               1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.3, 1.0980284671531702`}, {0.3, 
-               0.9019715328468298}}, {{0.7, 1.0980284671531702`}, {0.7, 
+              LineBox[{{{0.48, 1.0980284671531702`}, {0.48, 
+               0.9019715328468298}}, {{0.75, 1.0980284671531702`}, {0.75, 
                0.9019715328468298}}}]}, {}}]},
           
-          ImageSizeCache->{{60.8676046194451, 
-           589.1323953805547}, {-8.684757785310904, 3.6178827853108935`}}],
+          ImageSizeCache->{{60.86760461944516, 
+           589.1323953805552}, {-8.684757785310893, 3.6178827853109006`}}],
          "DelayedMouseEffectStyle"],
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.7`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.57`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.52`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.4225`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.3`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.695`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.62`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.56`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.48`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -2100,11 +2015,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.7}, {
-            Style["75%", Bold], 0.57}, {
-            Style["median", Bold], 0.52}, {
-            Style["25%", Bold], 0.4225}, {
-            Style["min", Bold], 0.3}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.695}, {
+            Style["median", Bold], 0.62}, {
+            Style["25%", Bold], 0.56}, {
+            Style["min", Bold], 0.48}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -2125,7 +2040,7 @@ Cell[BoxData[
     Rational[1, 10], 0.1],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{0.27999999999999997`, 0.7843373722630256},
+  AxesOrigin->{0.46649999999999997`, 0.7843373722630256},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{None, None}, {None, None}},
@@ -2145,40 +2060,40 @@ Cell[BoxData[
         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
       1.1960569343063403`, 
        FormBox[
-        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.57, 
-       FormBox["0.57`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.34, 
-       FormBox["0.34`", TraditionalForm]}, {0.35, 
-       FormBox["0.35`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.57, 
-       FormBox["0.57`", TraditionalForm]}, {0.65, 
-       FormBox["0.65`", TraditionalForm]}, {0.64, 
-       FormBox["0.64`", TraditionalForm]}, {0.61, 
-       FormBox["0.61`", TraditionalForm]}, {0.3, 
-       FormBox["0.3`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.6, 
-       FormBox["0.6`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.5, 
-       FormBox["0.5`", TraditionalForm]}, {0.68, 
-       FormBox["0.68`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.7, 
-       FormBox["0.7`", TraditionalForm]}, {0.49, 
-       FormBox["0.49`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.57, 
-       FormBox["0.57`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.31, 
-       FormBox["0.31`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}}, {{0.4225, 
-       FormBox["\"q1\"", TraditionalForm]}, {0.57, 
-       FormBox["\"q3\"", TraditionalForm]}, {0.7912499999999999, 
-       FormBox["\"near\"", TraditionalForm]}, {1.0124999999999997`, 
+        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.68, 
+       FormBox["0.68`", TraditionalForm]}, {0.72, 
+       FormBox["0.72`", TraditionalForm]}, {0.62, 
+       FormBox["0.62`", TraditionalForm]}, {0.58, 
+       FormBox["0.58`", TraditionalForm]}, {0.48, 
+       FormBox["0.48`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.66, 
+       FormBox["0.66`", TraditionalForm]}, {0.64, 
+       FormBox["0.64`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.54, 
+       FormBox["0.54`", TraditionalForm]}, {0.54, 
+       FormBox["0.54`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.58, 
+       FormBox["0.58`", TraditionalForm]}, {0.54, 
+       FormBox["0.54`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.62, 
+       FormBox["0.62`", TraditionalForm]}, {0.66, 
+       FormBox["0.66`", TraditionalForm]}, {0.66, 
+       FormBox["0.66`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.52, 
+       FormBox["0.52`", TraditionalForm]}, {0.52, 
+       FormBox["0.52`", TraditionalForm]}}, {{0.56, 
+       FormBox["\"q1\"", TraditionalForm]}, {0.695, 
+       FormBox["\"q3\"", TraditionalForm]}, {0.8974999999999997, 
+       FormBox["\"near\"", TraditionalForm]}, {1.0999999999999996`, 
        FormBox["\"far\"", TraditionalForm]}}}},
-  GridLines->{{{0.7912499999999999, 
-      Dashing[{Small, Small}]}, {1.0124999999999997`, 
+  GridLines->{{{0.8974999999999997, 
+      Dashing[{Small, Small}]}, {1.0999999999999996`, 
       Dashing[{Small, Small}]}}, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
@@ -2199,8 +2114,9 @@ Cell[BoxData[
        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}]], "Output",
  CellChangeTimes->{
   3.8956327977048597`*^9, {3.8956369685275373`*^9, 3.895636977917473*^9}, 
-   3.8956388897878513`*^9, 3.8956682857627115`*^9},
- CellLabel->"Out[65]=",ExpressionUUID->"35b0d16e-c962-4529-bf13-457cf4878808"]
+   3.8956388897878513`*^9, 3.8956682857627115`*^9, 3.895669293468114*^9},
+ CellLabel->
+  "Out[110]=",ExpressionUUID->"e0d5a700-fa91-4ed5-8635-e973f522d551"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2238,12 +2154,13 @@ Cell[BoxData[
       RowBox[{"GrayLevel", "[", "0", "]"}]}], "}"}]}], ",", " ", 
    RowBox[{"ImageSize", "->", "Full"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.895636980941309*^9, 3.895636992339718*^9}},
- CellLabel->"In[66]:=",ExpressionUUID->"7f209edd-30b5-4d71-af7b-eb404586e0ef"],
+ CellLabel->
+  "In[111]:=",ExpressionUUID->"7f209edd-30b5-4d71-af7b-eb404586e0ef"],
 
 Cell[BoxData[
  GraphicsBox[{
    {Opacity[0], 
-    PointBox[{{0.27999999999999997`, -0.19605693430634064`}, {0.72, 
+    PointBox[{{0.46649999999999997`, -0.19605693430634064`}, {0.7635, 
      2.1960569343063403`}}]}, 
    {RGBColor[0.982864, 0.7431472, 0.3262672], CapForm[None], {}, 
     {RGBColor[0.982864, 0.7431472, 0.3262672], 
@@ -2260,22 +2177,24 @@ Cell[BoxData[
               Opacity[0.66]}], {}, {}], 
            GraphicsGroupBox[{Antialiasing -> False, 
              
-             PolygonBox[{{0.57, 0.8039430656936596}, {0.57, 
-              1.1960569343063403`}, {0.4225, 1.1960569343063403`}, {0.4225, 
+             PolygonBox[{{0.695, 0.8039430656936596}, {0.695, 
+              1.1960569343063403`}, {0.56, 1.1960569343063403`}, {0.56, 
               0.8039430656936596}}], {}, {{}, {}}, {}, {
               GrayLevel[0], 
               GrayLevel[1], 
               
-              LineBox[{{0.52, 1.1960569343063403`}, {0.52, 
+              LineBox[{{0.62, 1.1960569343063403`}, {0.62, 
                0.8039430656936597}}]}, {}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
-              LineBox[{{{0.4225, 1.}, {0.3, 1.}}, {{0.57, 1.}, {0.7, 1.}}}]}, {
+              
+              LineBox[{{{0.56, 1.}, {0.48, 1.}}, {{0.695, 1.}, {0.75, 
+               1.}}}]}, {
               GrayLevel[0], 
               GrayLevel[0.5], 
               
-              LineBox[{{{0.3, 1.0980284671531702`}, {0.3, 
-               0.9019715328468298}}, {{0.7, 1.0980284671531702`}, {0.7, 
+              LineBox[{{{0.48, 1.0980284671531702`}, {0.48, 
+               0.9019715328468298}}, {{0.75, 1.0980284671531702`}, {0.75, 
                0.9019715328468298}}}]}, {}}]},
           
           ImageSizeCache->{{120.54487734671784`, 
@@ -2284,11 +2203,11 @@ Cell[BoxData[
         StyleBox[
          TagBox[
           GridBox[{{
-             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.7`"}, {
-             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.57`"}, {
-             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.52`"}, {
-             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.4225`"}, {
-             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.3`"}}, 
+             StyleBox["\"max\"", Bold, StripOnInput -> False], "0.75`"}, {
+             StyleBox["\"75%\"", Bold, StripOnInput -> False], "0.695`"}, {
+             StyleBox["\"median\"", Bold, StripOnInput -> False], "0.62`"}, {
+             StyleBox["\"25%\"", Bold, StripOnInput -> False], "0.56`"}, {
+             StyleBox["\"min\"", Bold, StripOnInput -> False], "0.48`"}}, 
            GridBoxAlignment -> {"Columns" -> {Center, ".", {Left}}}, 
            AutoDelete -> False, GridBoxDividers -> {"Columns" -> {
                Directive[
@@ -2313,11 +2232,11 @@ Cell[BoxData[
        Annotation[#, 
         Style[
          Grid[{{
-            Style["max", Bold], 0.7}, {
-            Style["75%", Bold], 0.57}, {
-            Style["median", Bold], 0.52}, {
-            Style["25%", Bold], 0.4225}, {
-            Style["min", Bold], 0.3}}, Dividers -> {{
+            Style["max", Bold], 0.75}, {
+            Style["75%", Bold], 0.695}, {
+            Style["median", Bold], 0.62}, {
+            Style["25%", Bold], 0.56}, {
+            Style["min", Bold], 0.48}}, Dividers -> {{
              Directive[
               GrayLevel[0.3]], {
               Directive[
@@ -2338,7 +2257,7 @@ Cell[BoxData[
     Rational[1, 10], 0.1],
   Axes->{False, False},
   AxesLabel->{None, None},
-  AxesOrigin->{0.27999999999999997`, 0.7843373722630256},
+  AxesOrigin->{0.46649999999999997`, 0.7843373722630256},
   DisplayFunction->Identity,
   Frame->True,
   FrameLabel->{{None, None}, {
@@ -2360,40 +2279,40 @@ Cell[BoxData[
         TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}, {
       1.1960569343063403`, 
        FormBox[
-        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.57, 
-       FormBox["0.57`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.34, 
-       FormBox["0.34`", TraditionalForm]}, {0.35, 
-       FormBox["0.35`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.57, 
-       FormBox["0.57`", TraditionalForm]}, {0.65, 
-       FormBox["0.65`", TraditionalForm]}, {0.64, 
-       FormBox["0.64`", TraditionalForm]}, {0.61, 
-       FormBox["0.61`", TraditionalForm]}, {0.3, 
-       FormBox["0.3`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.51, 
-       FormBox["0.51`", TraditionalForm]}, {0.6, 
-       FormBox["0.6`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.5, 
-       FormBox["0.5`", TraditionalForm]}, {0.68, 
-       FormBox["0.68`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}, {0.7, 
-       FormBox["0.7`", TraditionalForm]}, {0.49, 
-       FormBox["0.49`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.57, 
-       FormBox["0.57`", TraditionalForm]}, {0.55, 
-       FormBox["0.55`", TraditionalForm]}, {0.52, 
-       FormBox["0.52`", TraditionalForm]}, {0.46, 
-       FormBox["0.46`", TraditionalForm]}, {0.31, 
-       FormBox["0.31`", TraditionalForm]}, {0.41, 
-       FormBox["0.41`", TraditionalForm]}}, {{0.4225, 
-       FormBox["\"q1\"", TraditionalForm]}, {0.57, 
-       FormBox["\"q3\"", TraditionalForm]}, {0.7912499999999999, 
-       FormBox["\"near\"", TraditionalForm]}, {1.0124999999999997`, 
+        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}, {{{0.68, 
+       FormBox["0.68`", TraditionalForm]}, {0.72, 
+       FormBox["0.72`", TraditionalForm]}, {0.62, 
+       FormBox["0.62`", TraditionalForm]}, {0.58, 
+       FormBox["0.58`", TraditionalForm]}, {0.48, 
+       FormBox["0.48`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.66, 
+       FormBox["0.66`", TraditionalForm]}, {0.64, 
+       FormBox["0.64`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.54, 
+       FormBox["0.54`", TraditionalForm]}, {0.54, 
+       FormBox["0.54`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.56, 
+       FormBox["0.56`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.58, 
+       FormBox["0.58`", TraditionalForm]}, {0.54, 
+       FormBox["0.54`", TraditionalForm]}, {0.75, 
+       FormBox["0.75`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.62, 
+       FormBox["0.62`", TraditionalForm]}, {0.66, 
+       FormBox["0.66`", TraditionalForm]}, {0.66, 
+       FormBox["0.66`", TraditionalForm]}, {0.7, 
+       FormBox["0.7`", TraditionalForm]}, {0.52, 
+       FormBox["0.52`", TraditionalForm]}, {0.52, 
+       FormBox["0.52`", TraditionalForm]}}, {{0.56, 
+       FormBox["\"q1\"", TraditionalForm]}, {0.695, 
+       FormBox["\"q3\"", TraditionalForm]}, {0.8974999999999997, 
+       FormBox["\"near\"", TraditionalForm]}, {1.0999999999999996`, 
        FormBox["\"far\"", TraditionalForm]}}}},
-  GridLines->{{{0.7912499999999999, 
-      Dashing[{Small, Small}]}, {1.0124999999999997`, 
+  GridLines->{{{0.8974999999999997, 
+      Dashing[{Small, Small}]}, {1.0999999999999996`, 
       Dashing[{Small, Small}]}}, None},
   GridLinesStyle->Directive[
     GrayLevel[0.5, 0.4]],
@@ -2422,25 +2341,29 @@ Cell[BoxData[
       FormBox[
        TemplateBox[{0}, "Spacer1"], TraditionalForm], {0, 0}}}}]], "Output",
  CellChangeTimes->{{3.8956369815232334`*^9, 3.89563699334538*^9}, {
-   3.8956388956893687`*^9, 3.8956389193677835`*^9}, 3.8956682903830447`*^9},
- CellLabel->"Out[66]=",ExpressionUUID->"26cde74f-4268-4a10-acf1-1a1f50027664"]
+   3.8956388956893687`*^9, 3.8956389193677835`*^9}, 3.8956682903830447`*^9, 
+   3.895669296586027*^9},
+ CellLabel->
+  "Out[111]=",ExpressionUUID->"365e847b-cde9-4ffc-abbc-c2c8a6036992"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"Export", "[", " ", 
-  RowBox[{"\"\<distribution_q_ansatz_noise_credit.pdf\>\"", ",", "%"}], 
+  RowBox[{"\"\<distribution_q_ansatz_noise_artificial.pdf\>\"", ",", "%"}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.8956370017771683`*^9, 3.8956370086874557`*^9}, {
   3.895638912611266*^9, 3.8956389141827555`*^9}, {3.8956682958830194`*^9, 
-  3.8956683054527907`*^9}},
- CellLabel->"In[67]:=",ExpressionUUID->"4e68f0a8-61a8-4119-baae-1adab6af73ed"],
+  3.8956683054527907`*^9}, {3.895669299495045*^9, 3.895669300771987*^9}},
+ CellLabel->
+  "In[112]:=",ExpressionUUID->"4e68f0a8-61a8-4119-baae-1adab6af73ed"],
 
-Cell[BoxData["\<\"distribution_q_ansatz_noise_credit.pdf\"\>"], "Output",
+Cell[BoxData["\<\"distribution_q_ansatz_noise_artificial.pdf\"\>"], "Output",
  CellChangeTimes->{3.8956370095970907`*^9, 3.8956389224093323`*^9, 
-  3.895668306830942*^9},
- CellLabel->"Out[67]=",ExpressionUUID->"13b24481-ea02-42d7-b2db-82bada3e23b5"]
+  3.895668306830942*^9, 3.8956693015859947`*^9},
+ CellLabel->
+  "Out[112]=",ExpressionUUID->"828c1a98-355b-41b5-8e32-13506cff06a2"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3159,8 +3082,8 @@ aEY=
 39f15d524d44"]
 }, Open  ]]
 },
-WindowSize->{1440., 741.75},
-WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+WindowSize->{718.5, 735.},
+WindowMargins->{{Automatic, -5.25}, {Automatic, 0}},
 Magnification:>1.3 Inherited,
 FrontEndVersion->"13.2 para Microsoft Windows (64-bit) (January 30, 2023)",
 StyleDefinitions->"Default.nb",
@@ -3177,71 +3100,75 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 270, 5, 56, "Input",ExpressionUUID->"7aa3efa5-8eb5-4308-982e-b680782b33e0"],
-Cell[831, 27, 533, 10, 56, "Input",ExpressionUUID->"cb19885a-8e31-41b4-93bb-44e209c9d62e"],
-Cell[1367, 39, 588, 10, 56, "Input",ExpressionUUID->"da5c3df2-3feb-4ef0-833f-089be38da600"],
+Cell[558, 20, 274, 6, 56, "Input",ExpressionUUID->"7aa3efa5-8eb5-4308-982e-b680782b33e0"],
+Cell[835, 28, 591, 11, 56, "Input",ExpressionUUID->"cb19885a-8e31-41b4-93bb-44e209c9d62e"],
+Cell[1429, 41, 647, 12, 56, "Input",ExpressionUUID->"da5c3df2-3feb-4ef0-833f-089be38da600"],
 Cell[CellGroupData[{
-Cell[1980, 53, 324, 7, 36, "Input",ExpressionUUID->"2779bdaa-cf0b-403f-81d7-40afefa62694"],
-Cell[2307, 62, 627, 11, 92, "Output",ExpressionUUID->"f58d1efd-0431-4399-8b43-eafc0d01df61"]
+Cell[2101, 57, 328, 8, 36, "Input",ExpressionUUID->"2779bdaa-cf0b-403f-81d7-40afefa62694"],
+Cell[2432, 67, 668, 12, 92, "Output",ExpressionUUID->"31a85dcd-d934-4ee0-ab82-b6bdc8abc734"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2971, 78, 267, 4, 56, "Input",ExpressionUUID->"b97cdd4a-0e33-455c-9b22-d0aca3f66767"],
-Cell[3241, 84, 268, 3, 41, "Output",ExpressionUUID->"04af60e6-e65c-43ee-b446-5d623daa3eaa"]
+Cell[3137, 84, 368, 6, 56, "Input",ExpressionUUID->"b97cdd4a-0e33-455c-9b22-d0aca3f66767"],
+Cell[3508, 92, 424, 6, 61, "Output",ExpressionUUID->"374333f4-25e7-4675-97f5-4936a1157002"]
 }, Open  ]],
-Cell[3524, 90, 553, 16, 62, "Input",ExpressionUUID->"c9ab3450-4e88-4c94-9d2c-ed2e885c58e8"],
+Cell[3947, 101, 606, 18, 62, "Input",ExpressionUUID->"c9ab3450-4e88-4c94-9d2c-ed2e885c58e8"],
 Cell[CellGroupData[{
-Cell[4102, 110, 975, 21, 193, "Input",ExpressionUUID->"d25ca28a-9e36-4bea-8f45-34dc3e2115b5"],
-Cell[5080, 133, 18841, 473, 294, "Output",ExpressionUUID->"0f7b2a43-8f47-4049-9b83-76300735fb76"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[23958, 611, 1813, 45, 469, "Input",ExpressionUUID->"ef6a0f72-927e-4afe-b5f9-8d792bda8fef"],
-Cell[25774, 658, 19222, 486, 397, "Output",ExpressionUUID->"febc4172-d057-4fff-994d-2c17aacc07e2"]
+Cell[4578, 123, 979, 22, 193, "Input",ExpressionUUID->"d25ca28a-9e36-4bea-8f45-34dc3e2115b5"],
+Cell[5560, 147, 16498, 414, 294, "Output",ExpressionUUID->"cc6ab60b-df06-469f-86c3-9dcaabe337b6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45033, 1149, 372, 7, 56, "Input",ExpressionUUID->"0a99b78a-0d0a-42f2-946a-f990cffd6087"],
-Cell[45408, 1158, 258, 3, 41, "Output",ExpressionUUID->"940a0ce5-5aa1-42d9-93ff-203d69d82b65"]
-}, Open  ]],
-Cell[45681, 1164, 206, 4, 36, "Input",ExpressionUUID->"68786303-ad72-4077-8b51-41bb67bb8cc7"],
-Cell[CellGroupData[{
-Cell[45912, 1172, 964, 25, 151, "Input",ExpressionUUID->"c8cf00aa-8c06-489d-b3fe-4b81cb5febb9"],
-Cell[46879, 1199, 1014, 20, 54, "Output",ExpressionUUID->"a012e242-418a-45a9-a066-458c4510961b"]
+Cell[22095, 566, 1817, 46, 469, "Input",ExpressionUUID->"ef6a0f72-927e-4afe-b5f9-8d792bda8fef"],
+Cell[23915, 614, 16879, 427, 397, "Output",ExpressionUUID->"c7a3f497-881e-4bb9-8eee-f27cbcaafd90"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47930, 1224, 893, 24, 151, "Input",ExpressionUUID->"5ffcc727-1c4a-4470-b8d6-9632b4c025e9"],
-Cell[48826, 1250, 296, 4, 41, "Output",ExpressionUUID->"f4818066-ea06-4109-b783-92874efd87a6"]
+Cell[40831, 1046, 428, 8, 56, "Input",ExpressionUUID->"0a99b78a-0d0a-42f2-946a-f990cffd6087"],
+Cell[41262, 1056, 290, 4, 41, "Output",ExpressionUUID->"9a7f177d-dfb5-44c1-931f-ce81263e3eb1"]
+}, Open  ]],
+Cell[41567, 1063, 206, 4, 36, "Input",ExpressionUUID->"68786303-ad72-4077-8b51-41bb67bb8cc7"],
+Cell[CellGroupData[{
+Cell[41798, 1071, 968, 26, 197, "Input",ExpressionUUID->"c8cf00aa-8c06-489d-b3fe-4b81cb5febb9"],
+Cell[42769, 1099, 1070, 22, 54, "Output",ExpressionUUID->"e7dc0e34-1b5c-49cf-baf4-3af5d84e0c54"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[49159, 1259, 2683, 71, 264, "Input",ExpressionUUID->"8fa61195-ee17-416d-a987-ad4181ec05c6"],
-Cell[51845, 1332, 7237, 178, 124, "Output",ExpressionUUID->"f932154f-ebaf-4ae4-b8a2-b86c07d513b1"]
+Cell[43876, 1126, 897, 25, 151, "Input",ExpressionUUID->"5ffcc727-1c4a-4470-b8d6-9632b4c025e9"],
+Cell[44776, 1153, 323, 5, 41, "Output",ExpressionUUID->"b0babd5a-d2eb-4b92-845d-5d576b1a6b14"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[59119, 1515, 267, 5, 56, "Input",ExpressionUUID->"cf89fc26-c1e6-4da2-9ea5-eb54a3f86154"],
-Cell[59389, 1522, 7219, 177, 190, "Output",ExpressionUUID->"34a985d4-e343-4b83-b67c-210837db018c"]
+Cell[45136, 1163, 2687, 72, 433, "Input",ExpressionUUID->"8fa61195-ee17-416d-a987-ad4181ec05c6"],
+Cell[47826, 1237, 7007, 174, 124, "Output",ExpressionUUID->"ba734942-c8f4-41ed-b1f6-5f7e5b28b5ab"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[66645, 1704, 1292, 34, 102, "Input",ExpressionUUID->"473ac168-2afe-4bd2-8caa-8e9266452db5"],
-Cell[67940, 1740, 7590, 188, 248, "Output",ExpressionUUID->"32abe06b-5261-4fcc-bd0b-d79bc55466f4"]
+Cell[54870, 1416, 271, 6, 56, "Input",ExpressionUUID->"cf89fc26-c1e6-4da2-9ea5-eb54a3f86154"],
+Cell[55144, 1424, 6991, 173, 190, "Output",ExpressionUUID->"8d32f076-41f1-47df-ba3a-1c263d8317d4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75567, 1933, 387, 7, 56, "Input",ExpressionUUID->"b62a65df-13ec-4de7-b11d-5752e440e315"],
-Cell[75957, 1942, 273, 3, 41, "Output",ExpressionUUID->"1c5ab992-5283-4f7c-9a24-18992d30ffab"]
-}, Open  ]],
-Cell[76245, 1948, 181, 4, 56, "Input",ExpressionUUID->"30d81803-4cd9-4e86-9692-54d9bf5e24a6"],
-Cell[CellGroupData[{
-Cell[76451, 1956, 2665, 71, 264, "Input",ExpressionUUID->"6b50f65c-e787-43e8-9aa1-f356cc961245"],
-Cell[79119, 2029, 7111, 173, 124, "Output",ExpressionUUID->"35b0d16e-c962-4529-bf13-457cf4878808"]
+Cell[62172, 1602, 154, 3, 36, "Input",ExpressionUUID->"e3cb8ede-9cf8-426e-9d31-04ec98e73fb0"],
+Cell[62329, 1607, 152, 3, 41, "Output",ExpressionUUID->"adfd8434-929e-4247-a66b-e03d565dc6f1"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[86267, 2207, 1282, 33, 102, "Input",ExpressionUUID->"7f209edd-30b5-4d71-af7b-eb404586e0ef"],
-Cell[87552, 2242, 7477, 183, 248, "Output",ExpressionUUID->"26cde74f-4268-4a10-acf1-1a1f50027664"]
+Cell[62518, 1615, 1296, 35, 102, "Input",ExpressionUUID->"473ac168-2afe-4bd2-8caa-8e9266452db5"],
+Cell[63817, 1652, 7368, 185, 248, "Output",ExpressionUUID->"aa08813e-3d6b-4262-89e9-9d9fd12916b9"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[95066, 2430, 388, 7, 56, "Input",ExpressionUUID->"4e68f0a8-61a8-4119-baae-1adab6af73ed"],
-Cell[95457, 2439, 245, 3, 41, "Output",ExpressionUUID->"13b24481-ea02-42d7-b2db-82bada3e23b5"]
+Cell[71222, 1842, 440, 8, 56, "Input",ExpressionUUID->"b62a65df-13ec-4de7-b11d-5752e440e315"],
+Cell[71665, 1852, 305, 4, 41, "Output",ExpressionUUID->"14f59119-9438-44da-a05a-2952a79cc890"]
+}, Open  ]],
+Cell[71985, 1859, 181, 4, 56, "Input",ExpressionUUID->"30d81803-4cd9-4e86-9692-54d9bf5e24a6"],
+Cell[CellGroupData[{
+Cell[72191, 1867, 2718, 73, 264, "Input",ExpressionUUID->"6b50f65c-e787-43e8-9aa1-f356cc961245"],
+Cell[74912, 1942, 7175, 176, 124, "Output",ExpressionUUID->"e0d5a700-fa91-4ed5-8635-e973f522d551"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[95739, 2447, 517, 11, 56, "Input",ExpressionUUID->"2f17c9a9-6df7-412b-8947-e8137ba13b6b"],
-Cell[96259, 2460, 34090, 698, 439, "Output",ExpressionUUID->"335253ac-0a48-4be0-8481-39f15d524d44"]
+Cell[82124, 2123, 1286, 34, 102, "Input",ExpressionUUID->"7f209edd-30b5-4d71-af7b-eb404586e0ef"],
+Cell[83413, 2159, 7544, 187, 248, "Output",ExpressionUUID->"365e847b-cde9-4ffc-abbc-c2c8a6036992"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[90994, 2351, 442, 8, 56, "Input",ExpressionUUID->"4e68f0a8-61a8-4119-baae-1adab6af73ed"],
+Cell[91439, 2361, 277, 4, 41, "Output",ExpressionUUID->"828c1a98-355b-41b5-8e32-13506cff06a2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[91753, 2370, 517, 11, 56, "Input",ExpressionUUID->"2f17c9a9-6df7-412b-8947-e8137ba13b6b"],
+Cell[92273, 2383, 34090, 698, 439, "Output",ExpressionUUID->"335253ac-0a48-4be0-8481-39f15d524d44"]
 }, Open  ]]
 }
 ]
