@@ -97,7 +97,7 @@ def experiment(xdata,ydata, method, noisemethod, n):
             precs.append(classification_report(y_test, vqc1.predict(x_test)))
             precs.append(classification_report(y_test, vqc2.predict(x_test)))
             print("Iteration:"+ str(i))
-        with open("res_bc_feature.txt", 'w') as outfile:
+        with open("res_bc_ansatz.txt", 'w') as outfile:
             outfile.writelines((str(i)+'\n' for i in precs))
     elif method=="Torch":
         scores=[]
@@ -217,14 +217,9 @@ def experiment(xdata,ydata, method, noisemethod, n):
 #x = x[y != 2]
 #y = y[y != 2]
 #pca = PCA(n_components=4)
-
-x, y = make_classification(n_samples=100, n_features=4)
-
-#Execute PCA if the dataset contains more than 4 features, this to be able to simulate on a computer.
-if len(x.T)>4:
-    x_pca = pca.fit_transform(x)
-else:
-    x_pca=x
+ds=pd.read_csv("credit_.csv")
+x=ds.iloc[:100,:4].to_numpy()
+y=ds.iloc[:100,-1].to_numpy()
 print("Select a QML Algorithm:\n a) 'VQC'\n b) 'Torch'\n c) 'QSVC' ")
 method_name=str(input("Select Q-Algorithm\n"))
 print("Select a Noise Method Algorithm:\n a) 'feature'\n b) 'ansatz'\n  For QSVC is only available  feature.")
@@ -232,7 +227,7 @@ noise_name=str(input("Select Noise Method\n"))
 print("Select the number of executions that you're going to use.\n Full metrics are only available  for QVC")
 
 try:
-    experiment(xdata=x_pca, ydata=y, method=method_name, noisemethod=noise_name, n=int(input()))
+    experiment(xdata=x, ydata=y, method=method_name, noisemethod=noise_name, n=int(input()))
 except:
     print("Options that you introduce are not well defined")
     option=int("Try Again write 'again' or any key to close ")

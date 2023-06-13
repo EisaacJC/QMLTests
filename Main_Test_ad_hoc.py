@@ -43,6 +43,7 @@ if rand=="seed":
     algorithm_globals.random_seed = 123
 else:
     pass"""
+from qiskit_machine_learning.datasets import ad_hoc_data
 
 def noise(ansatz):
     ansatz_noise=ansatz
@@ -65,12 +66,18 @@ def experiment(xdata,ydata, method, noisemethod, n):
     """
     if method=="VQC":
         precs=[]
-        x = xdata[ydata != 2]
-        y = ydata[ydata != 2]
-        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+        #x = xdata[ydata != 2]
+        #y = ydata[ydata != 2]
+        feature_dim = 2  # dimension of each data point
+        training_size = 20
+        test_size = 10
+
+        x_train, y_train, x_test, y_test = ad_hoc_data(
+            training_size=training_size, test_size=test_size, n=feature_dim, gap=0.3
+        )
         for i in range(0,n):
-            feature_map = ZZFeatureMap(feature_dimension=4, reps=1, entanglement="linear")
-            ansatz = TwoLocal(num_qubits=4, rotation_blocks=["ry", "rz"], entanglement_blocks="cz")
+            feature_map = ZZFeatureMap(feature_dimension=2, reps=1, entanglement="linear")
+            ansatz = TwoLocal(num_qubits=2, rotation_blocks=["ry", "rz"], entanglement_blocks="cz")
             #feature_map_noise=noise(feature_map)
             sampler = Sampler()
             sampler.backend = Aer.get_backend("qasm_simulator", noise_model=noise_model, shots=100,
@@ -97,79 +104,85 @@ def experiment(xdata,ydata, method, noisemethod, n):
             precs.append(classification_report(y_test, vqc1.predict(x_test)))
             precs.append(classification_report(y_test, vqc2.predict(x_test)))
             print("Iteration:"+ str(i))
-        with open("res_bc_feature.txt", 'w') as outfile:
+        with open("res_bc_ansatz.txt", 'w') as outfile:
             outfile.writelines((str(i)+'\n' for i in precs))
     elif method=="Torch":
         scores=[]
-        X = xdata
-        y01=ydata
-        y = 2 * y01 - 1
-        y01 = 1 * (np.sum(X, axis=1) >= 0)
-        X_ = Tensor(X)
-        y01_ = Tensor(y01).reshape(len(y)).long()
-        y_ = Tensor(y).reshape(len(y), 1)
-        num_inputs = 4
+        #X = xdata
+        #y01=ydata
+        #y = 2 * y01 - 1
+        #y01 = 1 * (np.sum(X, axis=1) >= 0)
+        #X_ = Tensor(X)
+        #y01_ = Tensor(y01).reshape(len(y)).long()
+        #y_ = Tensor(y).reshape(len(y), 1)
+        #num_inputs = 4
         num_samples = 569
-        def closure():
-            optimizer.zero_grad()  # Initialize/clear gradients
-            loss = f_loss(model1(X_), y_)  # Evaluate loss function
-            loss.backward()  # Backward pass
-            print(loss.item())  # Print loss
-            return loss
-        for i in range(n):
-            print("Iteración",i)
-            feature_map = ZZFeatureMap(feature_dimension=num_inputs, reps=1, entanglement="linear")
-            ansatz = RealAmplitudes(num_inputs)
-            if noisemethod=="ansatz":
-                ansatz2=noise(ansatz)
-                feature_map2=feature_map
-            elif noisemethod=="feature":
-                ansatz2=ansatz
-                feature_map2=noise(feature_map)
-            qc = QuantumCircuit(num_inputs)
-            qc.compose(feature_map, inplace=True)
-            qc.compose(ansatz, inplace=True)
-            # Setup QNN
-            qnn1 = EstimatorQNN(
-                circuit=qc, input_params=feature_map.parameters, weight_params=ansatz.parameters
-            )
-            initial_weights = 0.1 * (2 * algorithm_globals.random.random(qnn1.num_weights) - 1)
-            qnn2 = EstimatorQNN(
-                circuit=qc, input_params=feature_map2.parameters, weight_params=ansatz2.parameters
-            )
+        #def closure():
+        #    optimizer.zero_grad()  # Initialize/clear gradients
+        #    loss = f_loss(model1(X_), y_)  # Evaluate loss function
+        #    loss.backward()  # Backward pass
+        #    print(loss.item())  # Print loss
+        #    return loss
+        #for i in range(n):
+        #    print("Iteración",i)
+        #    feature_map = ZZFeatureMap(feature_dimension=num_inputs, reps=1, entanglement="linear")
+         #   ansatz = RealAmplitudes(num_inputs)
+        #    if noisemethod=="ansatz":
+        #        ansatz2=noise(ansatz)
+        #        feature_map2=feature_map
+        #    elif noisemethod=="feature":
+        #        ansatz2=ansatz
+        #        feature_map2=noise(feature_map)
+        #    qc = QuantumCircuit(num_inputs)
+        #    qc.compose(feature_map, inplace=True)
+        #    qc.compose(ansatz, inplace=True)
+        #    # Setup QNN
+        #    qnn1 = EstimatorQNN(
+        #        circuit=qc, input_params=feature_map.parameters, weight_params=ansatz.parameters
+        #    )
+        #    initial_weights = 0.1 * (2 * algorithm_globals.random.random(qnn1.num_weights) - 1)
+        #    qnn2 = EstimatorQNN(
+        #        circuit=qc, input_params=feature_map2.parameters, weight_params=ansatz2.parameters
+        #    )
 
             #Model1
-            model1 = TorchConnector(qnn1, initial_weights=initial_weights)
-            optimizer = LBFGS(model1.parameters())
-            f_loss = MSELoss(reduction="sum")
-            model1.train()
-            optimizer.step(closure)
-            y_predict = []
-            for X, y_target in zip(X, y):
-                output = model1(Tensor(X))
-                y_predict += [np.sign(output.detach().numpy())[0]]
-            #Model2
-            model2 = TorchConnector(qnn2, initial_weights=initial_weights)
-            optimizer = LBFGS(model1.parameters())
-            f_loss = MSELoss(reduction="sum")
-            model2.train()
-            optimizer.step(closure)
-            y_predict2 = []
-            for X, y_target in zip(X, y):
-                output = model1(Tensor(X))
-                y_predict2 += [np.sign(output.detach().numpy())[0]]
-            scores.append(sum(y_predict == y) / len(y))
-            scores.append(sum(y_predict2 == y) / len(y))
-        pd.DataFrame(scores).to_csv("experimental_data_Torch.csv")
+        #    model1 = TorchConnector(qnn1, initial_weights=initial_weights)
+        #    optimizer = LBFGS(model1.parameters())
+        #    f_loss = MSELoss(reduction="sum")
+        #    model1.train()
+        #    optimizer.step(closure)
+         #   y_predict = []
+          #  for X, y_target in zip(X, y):
+        #        output = model1(Tensor(X))
+        #        y_predict += [np.sign(output.detach().numpy())[0]]
+        #    #Model2
+        #    model2 = TorchConnector(qnn2, initial_weights=initial_weights)
+        #    optimizer = LBFGS(model1.parameters())
+        #    f_loss = MSELoss(reduction="sum")
+        #    model2.train()
+        #    optimizer.step(closure)
+        #    y_predict2 = []
+        #    for X, y_target in zip(X, y):
+        #        output = model1(Tensor(X))
+        #        y_predict2 += [np.sign(output.detach().numpy())[0]]
+        #    scores.append(sum(y_predict == y) / len(y))
+        #    scores.append(sum(y_predict2 == y) / len(y))
+        #pd.DataFrame(scores).to_csv("experimental_data_Torch.csv")
     elif method=="QSVC":
-        X=xdata
-        y=ydata
+        #X=xdata
+        #y=ydata
         scores=[]
         if noisemethod=="feature":
             for i in range(n):
                 print("Iteration:",i)
-                train_features, test_features, train_labels, test_labels = train_test_split(X, y, test_size=0.2)
-                adhoc_feature_map = ZZFeatureMap(feature_dimension=len(X.T), reps=2, entanglement="linear")
+                feature_dim = 2  # dimension of each data point
+                training_size = 20
+                test_size = 10
+                #train_features, test_features, train_labels, test_labels = train_test_split(X, y, test_size=0.2)
+                train_features, train_labels, test_features, test_labels = ad_hoc_data(
+                    training_size=training_size, test_size=test_size, n=feature_dim, gap=0.3
+                )
+                adhoc_feature_map = ZZFeatureMap(feature_dimension=feature_dim, reps=2, entanglement="linear")
                 sampler = Sampler()
                 fidelity = ComputeUncompute(sampler=sampler)
                 adhoc_kernel = FidelityQuantumKernel(fidelity=fidelity, feature_map=adhoc_feature_map)
@@ -221,10 +234,10 @@ def experiment(xdata,ydata, method, noisemethod, n):
 x, y = make_classification(n_samples=100, n_features=4)
 
 #Execute PCA if the dataset contains more than 4 features, this to be able to simulate on a computer.
-if len(x.T)>4:
-    x_pca = pca.fit_transform(x)
-else:
-    x_pca=x
+#if len(x.T)>4:
+#    x_pca = pca.fit_transform(x)
+#else:
+#    x_pca=x
 print("Select a QML Algorithm:\n a) 'VQC'\n b) 'Torch'\n c) 'QSVC' ")
 method_name=str(input("Select Q-Algorithm\n"))
 print("Select a Noise Method Algorithm:\n a) 'feature'\n b) 'ansatz'\n  For QSVC is only available  feature.")
@@ -232,7 +245,7 @@ noise_name=str(input("Select Noise Method\n"))
 print("Select the number of executions that you're going to use.\n Full metrics are only available  for QVC")
 
 try:
-    experiment(xdata=x_pca, ydata=y, method=method_name, noisemethod=noise_name, n=int(input()))
+    experiment(xdata=True, ydata=True, method=method_name, noisemethod=noise_name, n=int(input()))
 except:
     print("Options that you introduce are not well defined")
     option=int("Try Again write 'again' or any key to close ")
